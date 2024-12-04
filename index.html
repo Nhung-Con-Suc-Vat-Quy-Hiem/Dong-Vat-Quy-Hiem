@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Động Vật Quý Hiếm - Giáng Sinh</title>
+
+    <!-- Thêm Favicon -->
+    <link rel="icon" href="./FIZSau7.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Hiệu ứng ánh sáng mặt trời */
+        .sunlight-effect {
+            position: fixed;
+            top: -20%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 223, 186, 0.5) 0%, transparent 60%);
+            filter: blur(80px);
+            z-index: -2;
+        }
+
+        /* Biểu tượng nền Giáng Sinh */
+        .background-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .background-icons i {
+            font-size: 100px;
+            color: #ff5252;
+            position: absolute;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .icon1 { top: 10%; left: 20%; color: #d84315; }
+        .icon2 { top: 50%; left: 60%; color: #ef6c00; }
+        .icon3 { top: 30%; left: 80%; color: #ff8f00; }
+        .icon4 { top: 80%; left: 10%; color: #ffd600; }
+        .icon5 { top: 60%; left: 30%; color: #66bb6a; }
+        .icon6 { top: 20%; left: 50%; color: #42a5f5; }
+        .icon7 { top: 70%; left: 90%; color: #26c6da; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        header, footer {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            background: linear-gradient(45deg, #4CAF50, #388E3C);
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Thêm logo vào header */
+        header .logo {
+            width: 80px; /* Đặt kích thước logo */
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .animal-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .animal {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.08);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .animal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .animal img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .animal-description {
+            text-align: left;
+            color: #555;
+        }
+
+        .animal-description h3 {
+            color: #388E3C;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .animal-description p {
+            margin: 5px 0;
+        }
+
+        .animal-description p i {
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+
+        footer {
+            padding: 10px;
+            background: linear-gradient(45deg, #333, #222);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hiệu ứng Ánh Sáng Mặt Trời -->
+    <div class="sunlight-effect"></div>
+
+    <header>
+        <!-- Logo -->
+        <img src="./FIZSau7.png" alt="Logo" class="logo">
+        <h1>Giới Thiệu Về Động Vật Quý Hiếm</h1>
+    </header>
+
+    <!-- Các biểu tượng Giáng Sinh nền -->
+    <div class="background-icons">
+        <i class="fas fa-snowflake icon1"></i>
+        <i class="fas fa-tree icon2"></i>
+        <i class="fas fa-gift icon3"></i>
+        <i class="fas fa-star icon4"></i>
+        <i class="fas fa-candy-cane icon5"></i>
+        <i class="fas fa-sleigh icon6"></i>
+        <i class="fas fa-bell icon7"></i>
+    </div>
+
+    <section>
+        <h2>Các Loài Động Vật Quý Hiếm</h2>
+        <div class="animal-container">
+            <!-- Hổ Bengal -->
+            <div class="animal">
+                <img src="./2b04db32-1dc1-4fc0-9d67-262a8ac4e1d1.jpg" alt="Hổ Bengal">
+                <div class="animal-description">
+                    <h3>Hổ Bengal</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Panthera tigris tigris</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Ấn Độ và Bangladesh</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Loài hổ lớn với bộ lông sọc đen trên nền vàng cam.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Đang bị đe dọa do săn trộm.</p>
+                </div>
+            </div>
+
+            <!-- Tê Giác Một Sừng -->
+            <div class="animal">
+                <img src="./2074567b-83bc-4e07-97d8-a8822f26340f.jpg" alt="Tê Giác Một Sừng">
+                <div class="animal-description">
+                    <h3>Tê Giác Một Sừng</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Rhinoceros unicornis</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Vùng Nam Á</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Loài tê giác với một sừng độc đáo.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Nguy cấp do săn trộm.</p>
+                </div>
+            </div>
+
+            <!-- Cá Voi Xanh -->
+            <div class="animal">
+                <img src="./28643456-c09d-403a-9583-69f19972a007.jpg" alt="Cá Voi Xanh">
+                <div class="animal-description">
+                    <h3>Cá Voi Xanh</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Balaenoptera musculus</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Các vùng biển lạnh</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Động vật lớn nhất thế giới, nặng tới 180 tấn.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Nguy cấp do mất môi trường sống.</p>
+                </div>
+            </div>
+
+            <!-- Tê Giác Đen -->
+            <div class="animal">
+                <img src="./fc3604f5-c8e5-47e3-857b-0f14160e452b.jpg" alt="Tê Giác Đen">
+                <div class="animal-description">
+                    <h3>Tê Giác Đen</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Diceros bicornis</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Châu Phi phía nam và đông nam</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Có hai chiếc sừng, ăn chủ yếu là cỏ.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Nguy cấp do săn trộm.</p>
+                </div>
+            </div>
+
+            <!-- Vượn Cáo Đuôi Vòng -->
+            <div class="animal">
+                <img src="./816fb1ba-f79f-4a9d-8376-035d3f44c996.jpg" alt="Vượn Cáo Đuôi Vòng">
+                <div class="animal-description">
+                    <h3>Vượn Cáo Đuôi Vòng</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Lemur catta</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Madagascar</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Đuôi dài với những vòng trắng đen đặc trưng.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Nguy cấp do phá rừng.</p>
+                </div>
+            </div>
+
+            <!-- Gấu Trúc Khổng Lồ -->
+            <div class="animal">
+                <img src="./697f3404-e724-4c41-bd87-8ea40eff6f92.jpg" alt="Gấu Trúc Khổng Lồ">
+                <div class="animal-description">
+                    <h3>Gấu Trúc Khổng Lồ</h3>
+                    <p><i class="fas fa-dna"></i><strong>Tên khoa học:</strong> Ailuropoda melanoleuca</p>
+                    <p><i class="fas fa-map-marker-alt"></i><strong>Môi trường sống:</strong> Trung Quốc</p>
+                    <p><i class="fas fa-paw"></i><strong>Đặc điểm:</strong> Bộ lông trắng đen đặc trưng, ăn chủ yếu trúc.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i><strong>Tình trạng bảo tồn:</strong> Nguy cấp do mất môi trường sống.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Phần Quyên Góp -->
+    <section class="donation-section">
+        <h2>Hãy Đóng Góp Để Bảo Vệ Động Vật Quý Hiếm</h2>
+        <p>Chúng tôi cần sự giúp đỡ của bạn để bảo vệ, chăm sóc những động vật hoang dã để chúng không còn rơi vào tình trạng nguy hiểm sắp tuyệt chung.</p>
+        <a href="https://www.zsl.org/support-us/donate-to-zsl" target="_blank" class="donation-button">Quyên Góp cho Zoological Society of London (ZSL)</a>
+        <p>ZSL là tổ chức bảo tồn động vật quốc tế, cam kết bảo vệ các loài động vật quý hiếm và đang gặp nguy hiểm, bao gồm các loài trong Danh sách Đỏ. Mục tiêu là bảo tồn động vật hoang dã và các loài đang gặp nguy cơ tuyệt chủng.</p>
+        <a href="https://www.bornfree.org.uk/donate/" target="_blank" class="donation-button">Quyên Góp cho The Born Free Foundation</a>
+        <p>Born Free Foundation hỗ trợ các chương trình bảo tồn và cứu hộ động vật hoang dã, đặc biệt là các loài trong Danh sách Đỏ. Mục tiêu là bảo vệ động vật hoang dã khỏi nguy cơ tuyệt chủng và ngừng việc sử dụng động vật trong các hoạt động giải trí.</p>
+        <a href="https://preserve.nature.org/page/80429/donate/1" target="_blank" class="donation-button">Quyên Góp cho The Nature Conservancy</a>
+        <p>The Nature Conservancy hoạt động để bảo vệ các hệ sinh thái quan trọng và các loài động vật quý hiếm trên toàn cầu. Mục tiêu là bảo tồn thiên nhiên và các loài động vật có nguy cơ tuyệt chủng.</p>
+        <a href="https://www.wcs.org/" target="_blank" class="donation-button">Quyên Góp cho Wildlife Conservation Society (WCS)</a>
+        <p>WCS hoạt động ở hơn 60 quốc gia và vùng lãnh thổ, bảo vệ các loài động vật nguy cấp và các hệ sinh thái quan trọng cho sự sống của chúng. Mục tiêu là bảo vệ động vật hoang dã và môi trường sống của chúng, đặc biệt là các loài trong Danh sách Đỏ.</p>
+        <a href="https://www.worldwildlife.org/" target="_blank" class="donation-button">Quyên Góp cho World Wildlife Fund (WWF)</a>
+        <p>WWF là một trong những tổ chức lớn nhất và nổi tiếng nhất trong việc bảo tồn động vật và bảo vệ thiên nhiên. Họ thực hiện các chiến dịch toàn cầu và có các chương trình giúp bảo vệ động vật trong Danh sách Đỏ của IUCN. Mục tiêu là bảo vệ các loài động vật nguy cấp và môi trường sống của chúng..</p>
+    </section>
+
+    <footer>
+        <p>Bản quyền thuộc về nhóm động vật quý hiếm - Trang web về động vật quý hiếm cần được bảo tồn</p>
+        <p>Thông tin liên hệ:</p>
+        <p>
+            <a href="mailto:huuthailop9a4@gmail.com">Gmail: Nhóm động vật quý hiếm</a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/chienthanbuhbuhlmao" target="_blank">Facebook: Trưởng nhóm động vật quý hiếm</a>
+        </p>
+    </footer>
+</body>
+</html>
